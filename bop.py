@@ -122,6 +122,7 @@ def run_bot():
                     xdriver2.activate_cdp_mode('https://ffc.click/MHS3_Brutalles', tzone=tz, geoloc=(lat, lon))
                     xdriver2.sleep(40)
                     xdriver2.cdp.open(url)
+                    xdriver2.sleep(15)
                     if xdriver2.is_element_present('button:contains("Start Watching")'):
                         xdriver2.cdp.click('button:contains("Start Watching")', timeout=4)
                         xdriver2.sleep(10)
