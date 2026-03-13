@@ -136,13 +136,3 @@ jobs:
       env:
         DISPLAY: ":99"                     # XVFB safety (GitHub runner)
 
-    # ====================== ARTIFACTS (always upload) ======================
-    - name: Upload screenshots & logs
-      if: always()                         # PRODUCTION: upload even if job fails
-      uses: actions/upload-artifact@v4
-      with:
-        name: seleniumbase-screenshots
-        path: |
-          ./latest_logs/
-          *.png
-          *.log
